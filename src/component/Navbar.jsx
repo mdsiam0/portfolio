@@ -11,8 +11,8 @@ const Navbar = () => {
       <div className="max-w-[1500px] mx-auto flex justify-between items-center px-6 py-4">
         <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
         <nav className="hidden md:flex space-x-8 text-sm">
-          <a href="#home" className="hover:text-gray-300 transition-colors">Home</a>
-          <a href="#works" className="hover:text-gray-300 transition-colors">Works</a>
+          <a href="/" className="hover:text-gray-300 transition-colors">Home</a>
+          <a href="#projects" className="hover:text-gray-300 transition-colors">Projects</a>
           <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
           <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
         </nav>
@@ -48,8 +48,8 @@ const Navbar = () => {
           </button>
         </div>
         <nav className="flex flex-col items-center justify-center flex-grow space-y-8 text-3xl font-semibold">
-          <a href="#home" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Home</a>
-          <a href="#works" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Works</a>
+          <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Home</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Projects</a>
           <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Contact</a>
           <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">About</a>
         </nav>

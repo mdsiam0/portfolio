@@ -13,6 +13,7 @@ body {
 }
 html {
   background-color: #030517;
+  scroll-behavior: smooth;
 }
 
 html, body, #root {

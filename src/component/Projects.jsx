@@ -6,8 +6,8 @@ const Projects = () => {
     return (
         
         
-        <div className="max-w-[1500px] mx-auto px-6 bg-[#030517] ">
-           <h1 className="text-center font-main text-3xl mb-3">My Projects</h1>
+        <div  className="max-w-[1500px] mx-auto px-6 bg-[#030517] ">
+           <h1 id="projects" className="text-center font-main text-3xl mb-3">My Projects</h1>
            <h2 className="text-center mb-7">Here are some of my recent works that I have done</h2>
            <div className="grid md:grid-cols-3 gap-8">
                 

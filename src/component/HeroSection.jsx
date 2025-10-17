@@ -12,10 +12,10 @@ const HeroSection = () => {
                 <p className='font-bold lg:text-4xl text-xl'>A front-end developer</p>
                 
                 <div className='flex gap-6 mt-5 lg:mt-10'>
-                    <a href=""><FaLinkedin size="30px" /></a>
-                    <a href=""><FaGithub size="30px" /></a>
-                    <a href=""><FaFacebook size="30px" /></a>
-                    <a href=""><FaXTwitter size="30px"/></a>
+                    <a href="https://www.linkedin.com/in/mdsiam0/"><FaLinkedin size="30px" /></a>
+                    <a href="https://github.com/mdsiam0"><FaGithub size="30px" /></a>
+                    <a href="https://www.facebook.com/md.siam.2004/"><FaFacebook size="30px" /></a>
+                    <a href="https://x.com/mds1am"><FaXTwitter size="30px"/></a>
                 </div>
                 <button className='btn text-black bg-white w-full sm:max-w-48 rounded-lg text-lg mt-10 mb-10 lg:mb-0'>My resume</button>
             </div>
