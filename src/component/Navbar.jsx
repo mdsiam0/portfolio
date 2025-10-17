@@ -7,9 +7,9 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 w-full z-50 text-white shadow-md bg-gradient-to-r from-[#131924] to-[#0B101B] bg-opacity-95 backdrop-blur-md">    
+    <header className="sticky top-0 w-full z-50 text-white shadow-md bg-gradient-to-r from-[#131924] to-[#0B101B] bg-opacity-80 backdrop-blur-md">    
       <div className="max-w-[1500px] mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-extrabold tracking-tight">Siam</h1>
+        <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
         <nav className="hidden md:flex space-x-8 text-sm">
           <a href="#home" className="hover:text-gray-300 transition-colors">Home</a>
           <a href="#works" className="hover:text-gray-300 transition-colors">Works</a>
@@ -37,8 +37,8 @@ const Navbar = () => {
         aria-hidden={!menuOpen}
         role="dialog"
       >
-        <div className="flex justify-between items-center px-6 py-4 flex-shrink-0">
-          <h1 className="text-2xl font-extrabold tracking-tight">Siam</h1>
+        <div className="flex justify-between items-center px-6 py-4 flex-shrink-0 ">
+          <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
           <button
             onClick={() => setMenuOpen(false)}
             className="text-3xl focus:outline-none"
