@@ -12,9 +12,10 @@ const Navbar = () => {
         <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
         <nav className="hidden md:flex space-x-8 text-sm">
           <a href="/" className="hover:text-gray-300 transition-colors">Home</a>
+          <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
           <a href="#projects" className="hover:text-gray-300 transition-colors">Projects</a>
           <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
-          <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
+          
         </nav>
 
        

@@ -3,7 +3,7 @@ import React from 'react';
 const AboutMeSection = () => {
     return (
         
-        <div className="bg-[#030517] max-w-[1500px] mx-auto  py-20 flex   text-[#c9d1d9] font-sans">
+        <div id="about" className="bg-[#030517] max-w-[1500px] mx-auto  py-20 flex   text-[#c9d1d9] font-sans">
             <div className=" px-4 sm:px-6 lg:px-8">
                 
                
