@@ -9,7 +9,7 @@ export const projects = [
     techStack: ["React", "TailwindCSS", "Vite"],
     description: "A personal portfolio website showcasing my projects and skills.",
     liveLink: "https://healthconnect-ph.netlify.app/",
-    githubLink: "https://github.com/username/portfolio-client",
+    githubLink: "https://github.com/mdsiam0/health-connect-client",
     challenges: "Making the design fully responsive across all devices.",
     improvements: "Add dark mode toggle and animations."
   },
@@ -20,7 +20,7 @@ export const projects = [
     techStack: ["React", "Node.js", "MongoDB"],
     description: "An online store with cart functionality, payment gateway integration, and user authentication.",
     liveLink: "https://whereisit0.netlify.app/",
-    githubLink: "https://github.com/username/ecommerce-client",
+    githubLink: "https://github.com/mdsiam0/whereisit-client",
     challenges: "Handling real-time cart updates and payment integration.",
     improvements: "Implement admin panel for inventory management."
   },
@@ -31,7 +31,7 @@ export const projects = [
     techStack: ["React", "Firebase"],
     description: "A task management app with real-time updates and user authentication.",
     liveLink: "https://hobbyhub-a10.netlify.app/",
-    githubLink: "https://github.com/username/taskmanager-client",
+    githubLink: "https://github.com/mdsiam0/HobbyHub-Client",
     challenges: "Ensuring real-time sync of tasks across devices.",
     improvements: "Add notifications and offline support."
   }

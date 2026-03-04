@@ -1,58 +1,69 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import { useNavigate, useLocation } from "react-router";
 
 const Navbar = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Smooth scroll helper
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Handle navigation & scroll
+  const handleNavClick = (sectionId) => {
+    setMenuOpen(false);
+    if (location.pathname === "/") {
+      scrollToSection(sectionId);
+    } else {
+      navigate("/", { state: { scrollTo: sectionId } });
+    }
+  };
 
   return (
-    <header className="sticky top-0 w-full z-50 text-white shadow-md bg-gradient-to-r from-[#131924] to-[#0B101B] bg-opacity-80 backdrop-blur-md">    
+    <header className="sticky top-0 w-full z-50 text-white shadow-md bg-gradient-to-r from-[#131924] to-[#0B101B] bg-opacity-80 backdrop-blur-md">
       <div className="max-w-[1500px] mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
+        <h1 className="text-3xl tracking-wider font-main">Siam</h1>
+
         <nav className="hidden md:flex space-x-8 text-sm">
-          <a href="/" className="hover:text-gray-300 transition-colors">Home</a>
-          <a href="#about" className="hover:text-gray-300 transition-colors">About</a>
-          <a href="#projects" className="hover:text-gray-300 transition-colors">Projects</a>
-          <a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a>
-          
+          <button onClick={() => handleNavClick("home")} className="hover:text-gray-300 transition-colors">Home</button>
+          <button onClick={() => handleNavClick("about")} className="hover:text-gray-300 transition-colors">About</button>
+          <button onClick={() => handleNavClick("projects")} className="hover:text-gray-300 transition-colors">Projects</button>
+          <button onClick={() => handleNavClick("contact")} className="hover:text-gray-300 transition-colors">Contact</button>
         </nav>
 
-       
         <button
           onClick={() => setMenuOpen(true)}
           className="md:hidden text-2xl focus:outline-none"
-          aria-label="Open menu"
         >
-       
           <FiMenu className="w-6 h-6" />
         </button>
       </div>
 
-     
+      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 w-full h-screen z-[100] flex flex-col text-white
           bg-gradient-to-r from-[#131924] to-[#0B101B] bg-opacity-95 backdrop-blur-md
           transform transition-transform duration-700 ease-out
           ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-[100vh] opacity-0 pointer-events-none"}`}
-        aria-hidden={!menuOpen}
-        role="dialog"
       >
-        <div className="flex justify-between items-center px-6 py-4 flex-shrink-0 ">
-          <h1 className="text-3xl  tracking-wider font-main">Siam</h1>
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="text-3xl focus:outline-none"
-            aria-label="Close menu"
-          >
+        <div className="flex justify-between items-center px-6 py-4">
+          <h1 className="text-3xl tracking-wider font-main">Siam</h1>
+          <button onClick={() => setMenuOpen(false)} className="text-3xl focus:outline-none">
             <FiX className="w-8 h-8" />
           </button>
         </div>
+
         <nav className="flex flex-col items-center justify-center flex-grow space-y-8 text-3xl font-semibold">
-          <a href="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Home</a>
-          <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Projects</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">Contact</a>
-          <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition-colors py-2">About</a>
+          <button onClick={() => handleNavClick("home")} className="hover:text-gray-400 transition-colors py-2">Home</button>
+          <button onClick={() => handleNavClick("projects")} className="hover:text-gray-400 transition-colors py-2">Projects</button>
+          <button onClick={() => handleNavClick("contact")} className="hover:text-gray-400 transition-colors py-2">Contact</button>
+          <button onClick={() => handleNavClick("about")} className="hover:text-gray-400 transition-colors py-2">About</button>
         </nav>
       </div>
     </header>

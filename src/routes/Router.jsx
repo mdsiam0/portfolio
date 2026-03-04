@@ -6,6 +6,7 @@ import ProjectDetails from "../component/ProjectDetails";
 
 
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,8 @@ export const router = createBrowserRouter([
         {
           path: 'projects/:id',
           Component: ProjectDetails,
-        }
+        },
+        
     ]
   },
 ]);
