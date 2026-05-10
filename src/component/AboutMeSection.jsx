@@ -8,7 +8,7 @@ const AboutMeSection = () => {
                 
                
                 <div className="mb-12">
-                    <h1 className="text-5xl font-extrabold text-white text-center mb-2">
+                    <h1 className="text-5xl font-extrabold text-white text-center mb-3">
                         About Me
                     </h1>
                     <p className="text-lg text-[#8b949e] text-center">
