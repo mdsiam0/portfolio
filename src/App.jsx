@@ -7,7 +7,7 @@ function App() {
     <>
      
       <h1>portfolio</h1>
-      <p>my frust protfolio\</p>
+      <p>my frist protfolio\</p>
      
     </>
   )
